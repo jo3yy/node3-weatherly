@@ -9,7 +9,7 @@ const forecast = (lat, lon, callback) => {
         } else if (body.error) {
             callback(`Unable to Find your Locaton!, Try another Search`, undefined)
         } else {
-            callback(undefined, `It is currently ${body.current.temperature} degrees out. The humidity is ${body.current.humidity}% With the wind speed of ${body.current.wind_speed}km/hr`);
+            callback(undefined, `It is currently ${body.current.temperature} degrees out. The humidity is ${body.current.humidity}% With the wind speed of ${body.current.wind_speed}km/hr.`);
         }
     });
 }

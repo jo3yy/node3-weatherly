@@ -26,7 +26,6 @@ app.use(express.static(publicDirPath))
 
 //rendering dynamic files from hbs with expressjs
 
-//root page
 app.get('', (req, res) => {
     res.render('index', 
     {
@@ -37,7 +36,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'about_me...',
+        title: '/about_me...',
         name: 'Joey'
     })
 })
@@ -45,7 +44,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         p: 'This is where I pretend to help you :)',
-        title: 'help_page',
+        title: '/help_page',
         name: 'Joey'
     })
 })
@@ -110,7 +109,7 @@ app.get('*', (req, res) => {
 })
 
 
-//port 3000 = local shit
+//port 3000 = local
 app.listen(port, () => {
     console.log(`server started on port ${port}`)
 })
